@@ -52,3 +52,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+data/text8.bin
+
+data/train.tsv
