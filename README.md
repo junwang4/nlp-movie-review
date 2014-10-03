@@ -9,6 +9,7 @@ Usage:
 
 > python experiment.py -h
 
+```
 usage: experiment.py [-h] [--cv CV] [--play_ratio PLAY_RATIO]
                      [--data_folder DATA_FOLDER] [--train_ratio TRAIN_RATIO]
                      [--quiet] [--pooling POOLING]
@@ -29,6 +30,7 @@ optional arguments:
   --quiet               don't show verbose info
   --pooling POOLING     how to aggregate a set of word vectors into one vector
                         (default="max") // choices: max, min, sum, mean
+```
 
 
 > python experiment.py --play_ratio=0.01 --cv 3
