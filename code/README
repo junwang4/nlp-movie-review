@@ -1,0 +1,34 @@
+== NOTES ==
+
+text8.bin is a 300-dimension pretrained word2vec model.
+
+The 1-billion-word corpus used to train the model is from: http://mattmahoney.net/dc/text8.zip
+
+We should not use "neighbor words" - look at this example:
+
+    > model.cosine('good')
+    > 
+    > ('bad', 0.54042731028657409),
+    > ('natured', 0.46385842768073826),
+    > ('luck', 0.42497662752295273),
+    > ('egun', 0.4212025679591751),
+    > ('affectation', 0.39169068231063342),
+    > ('pretty', 0.37954450816919627),
+    > ('foolish', 0.37181316813704901),
+    > ('reasonable', 0.36360311062209416),
+    > ('goodness', 0.35954953294022562),
+    > ('you', 0.3550184667540342)
+
+== NOTE 2 ==
+
+word2vec (text8.bin) model vocabulary size: 71,291
+number of word2vec words used by movie reviews: 12,226
+number of phrases whose all words are outside word2vec (71,291): 3430
+
+For example: both "affirmational" and "punitively" in the following phrases are outside the word2vec vocabulary
+
+21458   960 Punitively affirmational parable .  2
+21459   960 Punitively affirmational    3
+21460   960 Punitively  2
+21461   960 affirmational   2
+21462   960 parable .   2
