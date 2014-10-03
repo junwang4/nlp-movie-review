@@ -32,18 +32,20 @@ optional arguments:
                         (default="max") // choices: max, min, sum, mean
 ```
 
-
 > python experiment.py --play_ratio 0.01 --cv 3
+
 ```
 use only 1% data (i.e., 1560 phrases out of 156,000) for experiment
 ```
 
 > python experiment.py --cv 3 --pooling min
+
 ```
 use min-pooling to aggregate vectors of all words in a phrase
 ```
 
 > python experiment.py --data_folder ../data --play_ratio 0.01
+
 ```
 parameters:
     data_folder = ../data
