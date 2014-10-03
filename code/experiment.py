@@ -30,7 +30,8 @@ class Experiment():
         self.__dict__ = args
         if not self.config.quiet:
             print("parameters:")
-            print(self.config)
+            for k, v in vars(self.config).items():#cfg.items():
+                print("    %s = %s" % (k, v))
 
 
     def evaluate_tfidf(self):

@@ -33,6 +33,35 @@ optional arguments:
 ```
 
 
-> python experiment.py --play_ratio=0.01 --cv 3
+> python experiment.py --play_ratio 0.01 --cv 3
+```
+use only 1% data (i.e., 1560 phrases out of 156,000) for experiment
+```
 
 > python experiment.py --cv 3 --pooling min
+```
+use min-pooling to aggregate vectors of all words in a phrase
+```
+
+> python experiment.py --data_folder ../data --play_ratio 0.01
+```
+parameters:
+    data_folder = ../data
+    play_ratio = 0.01
+    quiet = False
+    train_ratio = None
+    pooling = max
+    cv = 2
+time elapsed after read training data: 0:00:00.229506
+dataset size of your experiment: 1560
+time elapsed after loading word2vec pretrained model: 0:00:04.652768
+number of word2vec word used in movie reviews:  504
+phrases without any word in word2vec_vocab:  59
+time elapsed after creating word2vec matrix: 0:00:05.458077
+score: 0.671795
+[Parallel(n_jobs=-1)]: Done   1 jobs       | elapsed:    1.1s
+score: 0.669231
+[Parallel(n_jobs=-1)]: Done   2 out of   2 | elapsed:    1.1s finished
+scores:  [ 0.67179487  0.66923077]
+time elapsed after finishing CV validation: 0:00:06.721579
+```
